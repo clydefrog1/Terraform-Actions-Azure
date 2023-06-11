@@ -52,3 +52,7 @@ jobs:
       uses: azure/login@v1
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
+      
+    # Apply the config
+    - name: Terraform Apply
+      run: terraform apply -auto-approve
